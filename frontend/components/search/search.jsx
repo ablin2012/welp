@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessIndex from "../business/business_index";
-import BusinessMap from "../business_map/business_map";
+import BusinessMap from "../business/business_map";
 
 class Search extends React.Component {
     constructor(props) {
@@ -8,11 +8,11 @@ class Search extends React.Component {
     }
 
     render () {
-        let {businesses, fetchBusinesses} = this.props
+        let {businesses, updateFilter} = this.props
         return (
             <div>
-                <BusinessMap />
-                <BusinessIndex businesses={businesses} fetchBusinesses={fetchBusinesses}/>
+                <BusinessMap businesses={businesses} updateFilter={updateFilter}/>
+                <BusinessIndex businesses={businesses}/>
             </div>
         )
     }

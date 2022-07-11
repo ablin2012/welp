@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { updateFilter } from "../../actions/filter_actions";
 import Search from "./search";
 
 const mapStateToProps = ({entities}) => {
@@ -9,7 +10,7 @@ const mapStateToProps = ({entities}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchBusinesses: () => dispatch(fetchBusinesses())
+        updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
     }
 }
 

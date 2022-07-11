@@ -5,8 +5,8 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstName: '',
-            lastName: '',
+            first_name: '',
+            last_name: '',
             email: '',
             password: '',
         };
@@ -18,7 +18,6 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
-        console.log(this.state);
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
@@ -54,10 +53,10 @@ class SessionForm extends React.Component {
             extraInputs = (
                 <>
                     <label> First Name: 
-                        <input type="text" value={this.state.firstName} onChange={this.update('firstName')} />
+                        <input type="text" value={this.state.first_name} onChange={this.update('first_name')} />
                     </label>
                     <label> Last Name: 
-                        <input type="text" value={this.state.lastName} onChange={this.update('lastName')} />
+                        <input type="text" value={this.state.last_name} onChange={this.update('last_name')} />
                     </label>
                 </>
             )
@@ -66,7 +65,6 @@ class SessionForm extends React.Component {
             altLink = <Link to='/signup'>Signup</Link>;
             inputButtonText = 'Log In'
         }
-        // debugger;
         return (
             <form onSubmit={this.handleSubmit}>
                 <h1>{formHeader}</h1>
