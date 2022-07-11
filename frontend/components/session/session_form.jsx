@@ -9,11 +9,16 @@ class SessionForm extends React.Component {
             lastName: '',
             email: '',
             password: '',
-        }
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     } 
 
+    componentDidMount() {
+        this.props.clearSessionErrors();
+    }
+
     handleSubmit(e) {
+        console.log(this.state);
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
@@ -23,9 +28,20 @@ class SessionForm extends React.Component {
         return e => this.setState({[field]: e.currentTarget.value})
     }
 
+    renderErrors() {
+        return(
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        );
+    }
+
     render(){
-        let {firstName, lastName, email, password} = this.state;
-        let {formType, errors} = this.props;
+        let {formType} = this.props;
         let formHeader, 
             altLink, 
             inputButtonText,
@@ -38,10 +54,10 @@ class SessionForm extends React.Component {
             extraInputs = (
                 <>
                     <label> First Name: 
-                        <input type="text" value={firstName} onChange={this.update('firstName')} />
+                        <input type="text" value={this.state.firstName} onChange={this.update('firstName')} />
                     </label>
                     <label> Last Name: 
-                        <input type="text" value={lastName} onChange={this.update('lastName')} />
+                        <input type="text" value={this.state.lastName} onChange={this.update('lastName')} />
                     </label>
                 </>
             )
@@ -50,27 +66,20 @@ class SessionForm extends React.Component {
             altLink = <Link to='/signup'>Signup</Link>;
             inputButtonText = 'Log In'
         }
-
-        const errorList = errors ? (
-            <ul>
-                {errors.map((error) => {
-                    return (<li>{error}</li>)
-                })}
-            </ul>
-        ) : null
-
+        // debugger;
         return (
             <form onSubmit={this.handleSubmit}>
-                {errorList}
-                <h1>{formTitle}</h1>
+                <h1>{formHeader}</h1>
+                {this.renderErrors()}
                 {extraInputs}
                 <label>Email:
-                    <input type="text" value={email} onChange={this.update('email')} />
+                    <input type="text" value={this.state.email} onChange={this.update('email')} />
                 </label>
                 <label>Password:
-                    <input type="password" value={password} onChange={this.update('password')} />
+                    <input type="password" value={this.state.password} onChange={this.update('password')} />
                 </label>
                 <input type="submit" value={inputButtonText} />
+                {altLink}
             </form>
         )
     }

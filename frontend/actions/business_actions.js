@@ -1,8 +1,14 @@
-export const RECEIVE_ALL_BUSINESSES = "RECEIVE_ALL_BUSINESSES";
+import * as BusinessAPIUtil from '../util/business_api_util';
+export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 
-export const receiveAllBusinesses = businesses => {
+const receiveBusinesses = (businesses) => {
     return {
-        type: RECEIVE_ALL_BUSINESSES,
+        type: RECEIVE_BUSINESSES,
         businesses
     }
+}
+
+export const fetchBusinesses = () => dispatch => {
+    return BusinessAPIUtil.fetchBusinesses()
+        .then((businesses) => dispatch(receiveBusinesses(businesses)))
 }

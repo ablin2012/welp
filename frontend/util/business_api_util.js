@@ -1,6 +1,8 @@
-export const fetchAllBusinesses = () => {
+export const fetchBusinesses = () => {
     return $.ajax({
         method: 'GET',
-        url: '/api/business'
+        url: '/api/businesses',
+        error: (err) => console.log(err)
     })
 }
+
