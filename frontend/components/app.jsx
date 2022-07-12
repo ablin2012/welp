@@ -4,14 +4,14 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import SearchContainer from './search/search_container';
 import BusinessShowContainer from './business/business_show_container';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link} from "react-router-dom";
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => {
     return (
         <div>
-            <header>
-                <h1>Welp</h1>
+            <header className="header">
+                <Link to="/" className="wbtn logo"><h1>Welp</h1></Link>
                 <GreetingContainer />
             </header>
             <Switch>

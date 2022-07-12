@@ -10,9 +10,9 @@ class Greeting extends React.Component {
                 <button onClick={logout}>Logout</button>
             </div>
         ) : (
-            <div>
-                <Link className="btn" to="/signup">Sign Up</Link>
-                <Link className="btn" to="/login">Log In</Link>
+            <div className="login-buttons">
+                <Link className="wbtn" to="/signup">Sign Up</Link>
+                <Link className="wbtn" to="/login">Log In</Link>
             </div>
         )
         return (

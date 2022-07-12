@@ -4,7 +4,8 @@ import { fetchBusiness } from "../../actions/business_actions";
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        business: state.entities.businesses[ownProps.match.params.businessId]
+        business: state.entities.businesses[ownProps.match.params.businessId],
+        businessId: parseInt(ownProps.match.params.businessId)
     }
 }
 

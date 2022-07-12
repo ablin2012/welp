@@ -10,8 +10,8 @@ class BusinessIndex extends React.Component {
     render() {
         let {businesses} = this.props
         return (
-            <div>
-                <h3>All Businesses</h3>
+            <div className="business-index">
+                <h3>All Results</h3>
                 {businesses.map((business) => {
                     return (<IndexItem business={business} key={business.id} />)
                 })}

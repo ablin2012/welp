@@ -1,3 +1,57 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wbtn {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    padding: 8px 19px 9px;
+    border-radius: 3px;
+    color: #fff;
+    background: #d32323;
+    border: 1px solid #d32323;
+    background-image: none;
+    background-repeat: no-repeat;
+    transition: all 0.6s;
+    transition-property: background-color, background-position, background-size, border-color;
+    background-position: 50% 50%;
+    background-size: 15000px 15000px;
+}
+
+.signup-form-container {
+    margin: auto;
+    padding: 0 18px;
+    max-width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hr-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.column {
+    float: left;
+    padding: 30px 30px;
+    min-height: 1px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.wform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

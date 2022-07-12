@@ -24,5 +24,5 @@ export const fetchBusinesses = (filters) => dispatch => {
 
 export const fetchBusiness = (id) => dispatch => {
     return BusinessAPIUtil.fetchBusiness(id)
-        .the((business) => dispatch(receiveBusiness(business)))
+        .then((business) => dispatch(receiveBusiness(business)))
 }

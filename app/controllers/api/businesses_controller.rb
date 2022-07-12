@@ -4,6 +4,10 @@ class Api::BusinessesController < ApplicationController
         render :index
     end
 
+    def show
+        @business = Business.find_by(id: params[:id])
+    end
+
     def create
         @business = Business.create!(business_params)
         render :show

@@ -11,7 +11,10 @@ class Search extends React.Component {
         let {businesses, updateFilter} = this.props
         return (
             <div>
-                <BusinessMap businesses={businesses} updateFilter={updateFilter}/>
+                <BusinessMap mapType="search-map-container"
+                    businesses={businesses} 
+                    updateFilter={updateFilter} 
+                    singleBusiness={false}/>
                 <BusinessIndex businesses={businesses}/>
             </div>
         )
