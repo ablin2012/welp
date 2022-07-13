@@ -7,15 +7,22 @@ class Search extends React.Component {
         super(props);
     }
 
+    // componentDidMount () {
+    //     console.log('working')
+    //     this.props.fetchBusinesses();
+    // }
+
     render () {
-        let {businesses, updateFilter} = this.props
+        let {businesses, updateFilter, fetchAllBusinesses} = this.props
         return (
-            <div>
+            <div className="search-page">
+                <BusinessIndex businesses={businesses}/>
                 <BusinessMap mapType="search-map-container"
                     businesses={businesses} 
                     updateFilter={updateFilter} 
-                    singleBusiness={false}/>
-                <BusinessIndex businesses={businesses}/>
+                    singleBusiness={false}
+                    // fetchAllBusinesses={fetchAllBusinesses}
+                    />
             </div>
         )
     }

@@ -4,21 +4,37 @@
 
 .business-index {
     width: 50%;
-    
 }
+
 .business-listing-link {
     text-decoration: none;
 }
 
-.business-listing {
-    padding: 20px;
-    border: 1px solid lightgrey;
+.listing-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    p {
+        padding: 10px 6px 10px 0px
+    }
 }
 
-h2 {
-    font-size: 32px;
+.business-listing {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    h2 {
+        font-size: 24px;
+    }
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.search-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

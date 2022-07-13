@@ -52,6 +52,7 @@ class SessionForm extends React.Component {
             altLink, 
             inputButtonText,
             subText,
+            blurb,
             extraInputs = null;
 
         if (formType === 'signup') {
@@ -59,34 +60,57 @@ class SessionForm extends React.Component {
             altLink = (<Link to='/login'>Login</Link>);
             inputButtonText = 'Sign Up';
             subText = 'Already on Welp? ';
+            blurb = (
+                <div>
+                    <p>Connect with great local businesses</p>
+                    <small className="subtle-text">By continuing, you agree to Welp's Terms of Service and acknowledge Welp's Privacy Policy.</small>
+                </div>
+            )
             extraInputs = (
-                <>
-                    <input id="first_name"
+                <div className="name-inputs">
+                    <input id="first-name"
                         type="text" 
                         value={this.state.first_name} 
                         onChange={this.update('first_name')}
                         placeholder="First Name" /> 
-                    <input id="last_name"
+                    <input id="last-name"
                         type="text" 
                         value={this.state.last_name} 
                         onChange={this.update('last_name')} 
                         placeholder="Last Name"/>
-                </>
+                </div>
             )
         } else {
             formHeader = 'Log In to Welp';
             altLink = <Link to='/signup'>Signup</Link>;
             inputButtonText = 'Log In';
             subText = 'New to Welp? ';
+            blurb = (
+                <div>
+                    <p>{subText}{altLink}</p>
+                    <small>By logging in, you agree to Welp's Terms of Service and Privacy Policy.</small>
+                </div>
+            )
         }
         return (
             <div className="column">
                 <div className="signup-form-container">
-                    <h2>{formHeader}</h2>
-                    <button className="wbtn" 
-                        onClick={this.loginGuest}>
-                            Login as Guest
-                    </button>
+                    <div className="above-form">
+                        <h2>{formHeader}</h2>
+                        {blurb}
+                        <button className="wbtn gray" 
+                            onClick={this.loginGuest}>
+                                Login as Guest
+                        </button>
+                        <button className="wbtn blue" 
+                            onClick={this.loginGuest}>
+                                Also Login as Guest
+                        </button>
+                        <button className="wbtn black" 
+                            onClick={this.loginGuest}>
+                                Login as Guest Again
+                        </button>
+                    </div>
                     <fieldset className="login-separator hr-line">
                         <legend>OR</legend>
                     </fieldset>

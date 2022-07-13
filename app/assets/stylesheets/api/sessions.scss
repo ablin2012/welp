@@ -16,8 +16,8 @@
     padding: 8px 19px 9px;
     border-radius: 3px;
     color: #fff;
-    background: #d32323;
-    border: 1px solid #d32323;
+    background: #dc8c24;
+    border: 1px solid #dc8c24;
     background-image: none;
     background-repeat: no-repeat;
     transition: all 0.6s;
@@ -26,12 +26,31 @@
     background-size: 15000px 15000px;
 }
 
+.wbtn.black {
+    background: #3c3c44;
+    border: 1px solid #3c3c44;
+}
+
+.wbtn.blue {
+    background: #7094b7;
+    border: 1px solid #7094b7;
+}
+
+.wbtn.gray {
+    background: #c6b3b0;
+    border: 1px solid #c6b3b0;
+}
+
 .signup-form-container {
     margin: auto;
     padding: 0 18px;
-    max-width: 100%;
+    max-width: 60%;
     text-align: center;
     padding: 30px;
+    h2 {
+        font-size: 24px;
+        color: #dc8c24;
+    }
 }
 
 .hr-line {
@@ -50,8 +69,53 @@
     width: 50%;
 }
 
+.above-form {
+    display: flex;
+    flex-direction: column;
+    button {
+        margin-top: 15px;
+    }
+    p {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
+
 .wform {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    input {
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 15px;
+    }
+    .sub-text-box {
+        display: flex;
+        justify-content: right;
+        margin-top: 5px;
+    }
+}
+
+.subtle-text {
+    font-size: 12px;
+    color: gray;
+}
+
+legend {
+    color: gray;
+}
+
+.name-inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#first-name {
+    width: 48%;
+}
+
+#last-name {
+    width: 48%;
 }

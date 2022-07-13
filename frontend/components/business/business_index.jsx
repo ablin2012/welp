@@ -12,9 +12,11 @@ class BusinessIndex extends React.Component {
         return (
             <div className="business-index">
                 <h3>All Results</h3>
-                {businesses.map((business) => {
-                    return (<IndexItem business={business} key={business.id} />)
-                })}
+                <div className="business-list">
+                    {businesses.map((business) => {
+                        return (<IndexItem business={business} key={business.id} />)
+                    })}
+                </div>
             </div>
         );
     }
