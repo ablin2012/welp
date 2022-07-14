@@ -1,7 +1,8 @@
 import * as BusinessAPIUtil from '../util/business_api_util';
 
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
-export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS"
+export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 
 const receiveBusinesses = (businesses) => {
     return {
@@ -10,10 +11,18 @@ const receiveBusinesses = (businesses) => {
     }
 }
 
-const receiveBusiness = (business) => {
+const receiveBusiness = ({ business, reviews }) => {
     return {
         type: RECEIVE_BUSINESS,
-        business
+        business,
+        reviews
+    }
+}
+
+const receiveReview = (review) => {
+    return {
+        type: RECEIVE_REVIEW,
+        review
     }
 }
 
@@ -29,5 +38,10 @@ export const fetchBusinesses = (filters) => dispatch => {
 
 export const fetchBusiness = (id) => dispatch => {
     return BusinessAPIUtil.fetchBusiness(id)
-        .then((business) => dispatch(receiveBusiness(business)))
+        .then((payload) => dispatch(receiveBusiness(payload)))
+}
+
+export const createReview = (review) => dispatch => {
+    return BusinessAPIUtil.createReview(review)
+        .then((review) => dispatch(receiveReview(review)))
 }

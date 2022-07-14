@@ -19,3 +19,11 @@ export const fetchBusiness = (id) => {
         url: `/api/businesses/${id}`,
     })
 }
+
+export const createReview = (review) => {
+    return $.ajax({
+        method: 'POST',
+        url: `/api/businesses/${review.business_id}/reviews`,
+        data: { review }
+    })
+}

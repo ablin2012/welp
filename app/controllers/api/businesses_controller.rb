@@ -27,7 +27,8 @@ class Api::BusinessesController < ApplicationController
             :phone,
             :hours,
             :price,
-            :website
+            :website,
+            photos: []
         )
     end
 end
