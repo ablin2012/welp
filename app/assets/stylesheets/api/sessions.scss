@@ -24,6 +24,11 @@
     transition-property: background-color, background-position, background-size, border-color;
     background-position: 50% 50%;
     background-size: 15000px 15000px;
+    a {
+        text-decoration: none;
+        color: black;
+        z-index: 3;
+    }
 }
 
 .wbtn.black {
@@ -39,6 +44,11 @@
 .wbtn.gray {
     background: #c6b3b0;
     border: 1px solid #c6b3b0;
+}
+
+.wbtn.white {
+    background: white;
+    border: 1px solid lightgray;
 }
 
 .signup-form-container {

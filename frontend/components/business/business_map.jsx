@@ -6,19 +6,25 @@ import MarkerManager from "../../util/marker_manager";
 
 class BusinessMap extends React.Component {
     componentDidMount() {
+        let clickable = true;
         // this.props.fetchAllBusinesses();
-        const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 },
+        const mapOptions = (this.props.centerLat) ? (
+            {center: { lat: parseFloat(this.props.centerLat), lng: parseFloat(this.props.centerLng)},
+            zoom: 13}
+            ) : (
+            {center: { lat: 37.7758, lng: -122.435 },
             // center: {lat: parseFloat(this.props.businesses[0].lat), lng: parseFloat(this.props.businesses[0].lng)},
-            zoom: 13
-        };
+            zoom: 13}
+        );
+
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
         if (this.props.singleBusiness) {
             this.props.fetchBusiness(this.props.businessId);
+            clickable = false;
         } else {
             this.registerListeners();
         }
+        this.MarkerManager = new MarkerManager(this.map, clickable, this.handleMarkerClick.bind(this));
         this.MarkerManager.updateMarkers(this.props.businesses);
     }
 

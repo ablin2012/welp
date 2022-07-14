@@ -17,12 +17,14 @@ class Search extends React.Component {
         return (
             <div className="search-page">
                 <BusinessIndex businesses={businesses}/>
-                <BusinessMap mapType="search-map-container"
-                    businesses={businesses} 
-                    updateFilter={updateFilter} 
-                    singleBusiness={false}
-                    // fetchAllBusinesses={fetchAllBusinesses}
-                    />
+                <div className="search-map-container">
+                    <BusinessMap mapType="search-map"
+                        businesses={businesses} 
+                        updateFilter={updateFilter} 
+                        singleBusiness={false}
+                        // fetchAllBusinesses={fetchAllBusinesses}
+                        />
+                </div>
             </div>
         )
     }

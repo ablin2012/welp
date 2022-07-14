@@ -7,22 +7,34 @@ class IndexItem extends React.Component {
     }
 
     render () {
-        let {business} = this.props
+        let {business, idx} = this.props
+        console.log("business", business.photoUrls[0])
         let websiteButton = (business.website) ? (
-            <button className="wbtn"><a href={business.website}>View Website</a></button>
+            <div className="listing-btn">
+                <button className="wbtn white"><a href={business.website}>View Website</a></button>
+            </div>
         ) : (null)
         return (
             <div className="business-listing">
                 <Link className="business-listing-link" to={`/businesses/${business.id}`}>
-                        <h2>{business.name}</h2>
-                        <div className="listing-info">
-                            <p>{business.category}</p>
-                            <p>{business.price}</p>
-                            <p>{business.city}</p>
+                    <div className="listing-left">
+                        <div className="img-icon-container">
+                            <img className="img-icon" src={business.photoUrls[0]}/>
                         </div>
-                        <div className="listing-hours">Open {business.hours}</div>
+                    </div>
+                    <div className="listing-right">
+                        <div className="info-container">
+                            <h2>{idx + 1}. {business.name}</h2>
+                            <div className="listing-info">
+                                <p>{business.category}</p>
+                                <p>{business.price}</p>
+                                <p>{business.city}</p>
+                            </div>
+                            <div className="listing-hours">Open {business.hours}</div>
+                        </div>
+                        {websiteButton}
+                    </div>
                 </Link>
-                {websiteButton}
             </div>
         );
     }

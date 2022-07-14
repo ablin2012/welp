@@ -3,6 +3,7 @@ import * as BusinessAPIUtil from '../util/business_api_util';
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+export const REMOVE_REVIEWS = "REMOVE_REVIEWS";
 
 const receiveBusinesses = (businesses) => {
     return {
@@ -11,18 +12,26 @@ const receiveBusinesses = (businesses) => {
     }
 }
 
-const receiveBusiness = ({ business, reviews }) => {
+const receiveBusiness = ({ business, reviews, users }) => {
     return {
         type: RECEIVE_BUSINESS,
         business,
-        reviews
+        reviews,
+        users
     }
 }
 
-const receiveReview = (review) => {
+const receiveReview = ({review, user}) => {
     return {
         type: RECEIVE_REVIEW,
-        review
+        review,
+        user
+    }
+}
+
+export const removeReviews = () => {
+    return {
+        type: REMOVE_REVIEWS
     }
 }
 

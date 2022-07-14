@@ -1,6 +1,7 @@
 export default class MarkerManager {
-    constructor(map, handleClick) {
+    constructor(map, clickable, handleClick) {
         this.map = map;
+        this.clickable = clickable;
         this.handleClick = handleClick;
         this.markers = {};
     }
@@ -21,7 +22,8 @@ export default class MarkerManager {
         const marker = new google.maps.Marker({
             position,
             map: this.map,
-            businessId: business.id
+            businessId: business.id,
+            clickable: this.clickable
         })
 
         marker.addListener('click', () => this.handleClick(business));

@@ -1,4 +1,4 @@
-import { RECEIVE_BUSINESS, RECEIVE_REVIEW } from "../actions/business_actions";
+import { RECEIVE_BUSINESS, RECEIVE_REVIEW, REMOVE_REVIEWS } from "../actions/business_actions";
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -8,6 +8,8 @@ const reviewsReducer = (state = {}, action) => {
         case RECEIVE_REVIEW:
             const { review } = action;
             return Object.assign({}, state, { [review.id]: review });
+        case REMOVE_REVIEWS:
+            return {};
         default:
             return state;
     }

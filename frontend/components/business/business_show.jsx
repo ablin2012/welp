@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewsIndexContainer from "../reviews/reviews_index_container";
 import BusinessMap from "./business_map";
 
 class BusinessShow extends React.Component{
@@ -10,6 +11,10 @@ class BusinessShow extends React.Component{
         this.props.fetchBusiness(this.props.businessId);   
     }
 
+    componentWillUnmount() {
+        this.props.removeReviews();
+    }
+
     render() {
         let {business, fetchBusiness, businessId} = this.props;
         if (!business) {
@@ -17,17 +22,18 @@ class BusinessShow extends React.Component{
         }
         const businesses = business;
         return (
-            <div>
+            <div className="business-show-page">
                 <h1>{business.name}</h1>
                 <div>{business.price} {business.category}</div>
                 <div>Open {business.hours}</div>
-                <BusinessMap mapType="map-container"
+                <BusinessMap mapType="single-map-container"
                     centerLat={business.lat}
                     centerLng={business.lng}
                     fetchBusiness={fetchBusiness} 
                     singleBusiness={true} 
                     businesses={[business]} 
                     businessId={businessId}/>
+                <ReviewsIndexContainer />
             </div>
         );
     }
