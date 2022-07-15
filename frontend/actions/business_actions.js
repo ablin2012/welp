@@ -4,6 +4,7 @@ export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEWS = "REMOVE_REVIEWS";
+export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 const receiveBusinesses = (businesses) => {
     return {
@@ -26,6 +27,13 @@ const receiveReview = ({review, user}) => {
         type: RECEIVE_REVIEW,
         review,
         user
+    }
+}
+
+const removeReview = (reviewId) => {
+    return {
+        type: REMOVE_REVIEW,
+        reviewId
     }
 }
 
@@ -53,4 +61,14 @@ export const fetchBusiness = (id) => dispatch => {
 export const createReview = (review) => dispatch => {
     return BusinessAPIUtil.createReview(review)
         .then((review) => dispatch(receiveReview(review)))
+}
+
+export const fetchReview = (reviewId) => dispatch => {
+    return BusinessAPIUtil.fetchReview(reviewId)
+        .then((review) => dispatch(receiveReview(review)))
+}
+
+export const deleteReview = (reviewId) => dispatch => {
+    return BusinessAPIUtil.deleteReview(reviewId)
+        .then((review) => dispatch(removeReview(review.id)))
 }

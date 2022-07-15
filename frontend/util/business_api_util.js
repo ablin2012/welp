@@ -27,3 +27,17 @@ export const createReview = (review) => {
         data: { review }
     })
 }
+
+export const fetchReview = (reviewId) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/reviews/${reviewId}`
+    })
+}
+
+export const deleteReview = (reviewId) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `/api/reviews/${reviewId}`
+    })
+}

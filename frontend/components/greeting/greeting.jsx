@@ -6,8 +6,8 @@ class Greeting extends React.Component {
         let {currentUser, logout} = this.props;
         const display = currentUser ? (
             <div>
-                <h1>Welcome {currentUser.firstName}</h1>
-                <button onClick={logout}>Logout</button>
+                <p>Welcome, {currentUser.firstName}!</p>
+                <button className="wbtn" onClick={logout}>Logout</button>
             </div>
         ) : (
             <div className="login-buttons">

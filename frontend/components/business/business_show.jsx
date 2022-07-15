@@ -1,6 +1,7 @@
 import React from "react";
 import ReviewsIndexContainer from "../reviews/reviews_index_container";
 import BusinessMap from "./business_map";
+import { Link } from "react-router-dom";
 
 class BusinessShow extends React.Component{
     constructor(props){
@@ -33,6 +34,7 @@ class BusinessShow extends React.Component{
                     singleBusiness={true} 
                     businesses={[business]} 
                     businessId={businessId}/>
+                <Link to={`/businesses/${businessId}/reviews/new`}>Leave a Review</Link>
                 <ReviewsIndexContainer />
             </div>
         );
