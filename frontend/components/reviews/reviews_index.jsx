@@ -6,7 +6,6 @@ class ReviewsIndex extends React.Component {
         let {reviews, users, currentUserId, deleteReview} = this.props;
         return (
             <div className="reviews-index">
-                <h2>Recommended Reviews</h2>
                 <div className="reviews-list">
                     {reviews.map((review) => {
                         return (<ReviewsIndexItem 

@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.login-page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .wbtn {
     display: inline-block;
     vertical-align: middle;
@@ -52,12 +57,12 @@
 }
 
 .signup-form-container {
-    margin: auto;
     padding: 0 18px;
-    max-width: 60%;
+    width: 325px;
     text-align: center;
     padding: 30px;
     h2 {
+        font-weight: 900;
         font-size: 24px;
         color: #dc8c24;
     }
@@ -72,7 +77,8 @@
 }
 
 .column {
-    float: left;
+    display: flex;
+    justify-content: right;
     padding: 30px 30px;
     min-height: 1px;
     box-sizing: border-box;
@@ -128,4 +134,15 @@ legend {
 
 #last-name {
     width: 48%;
+}
+
+.img-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    img {
+        margin-left: 18px;
+        width: 400px;
+    }
 }

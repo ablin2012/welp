@@ -15,7 +15,7 @@ const App = () => {
     return (
         <div>
             <header className="header">
-                <Link to="/" className="wbtn logo"><h1>Welp</h1></Link>
+                <Link to="/" ><img src={window.logoUrl}/></Link>
                 <SearchBarContainer />
                 <GreetingContainer />
             </header>

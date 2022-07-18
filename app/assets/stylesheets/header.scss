@@ -12,6 +12,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgrey;
+    img {
+        padding-top: 10px;
+        height: 45px;
+    }
 }
 
 .login-buttons {

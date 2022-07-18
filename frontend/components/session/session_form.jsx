@@ -93,48 +93,53 @@ class SessionForm extends React.Component {
             )
         }
         return (
-            <div className="column">
-                <div className="signup-form-container">
-                    <div className="above-form">
-                        <h2>{formHeader}</h2>
-                        {blurb}
-                        <button className="wbtn gray" 
-                            onClick={this.loginGuest}>
-                                Login as Guest
-                        </button>
-                        <button className="wbtn blue" 
-                            onClick={this.loginGuest}>
-                                Also Login as Guest
-                        </button>
-                        <button className="wbtn black" 
-                            onClick={this.loginGuest}>
-                                Login as Guest Again
-                        </button>
-                    </div>
-                    <fieldset className="login-separator hr-line">
-                        <legend>OR</legend>
-                    </fieldset>
-                    <form className="wform" onSubmit={this.handleSubmit}>
-                        {this.renderErrors()}
-                        {extraInputs}
-                        <input id="email"
-                            type="text" 
-                            value={this.state.email} 
-                            onChange={this.update('email')}
-                            placeholder="Email" />
-                        <input id="password"
-                            type="password" 
-                            value={this.state.password} 
-                            onChange={this.update('password')} 
-                            placeholder="Password"/>
-                        <button className="wbtn">{inputButtonText}</button>
-                        <div className="sub-text-box">
-                            <small className="subtle-text">
-                                {subText}
-                                {altLink}
-                            </small>
+            <div className="login-page">
+                <div className="column">
+                    <div className="signup-form-container">
+                        <div className="above-form">
+                            <h2>{formHeader}</h2>
+                            {blurb}
+                            <button className="wbtn gray" 
+                                onClick={this.loginGuest}>
+                                    Login as Guest
+                            </button>
+                            <button className="wbtn blue" 
+                                onClick={this.loginGuest}>
+                                    Also Login as Guest
+                            </button>
+                            <button className="wbtn black" 
+                                onClick={this.loginGuest}>
+                                    Login as Guest Again
+                            </button>
                         </div>
-                    </form>
+                        <fieldset className="login-separator hr-line">
+                            <legend>OR</legend>
+                        </fieldset>
+                        <form className="wform" onSubmit={this.handleSubmit}>
+                            {this.renderErrors()}
+                            {extraInputs}
+                            <input id="email"
+                                type="text" 
+                                value={this.state.email} 
+                                onChange={this.update('email')}
+                                placeholder="Email" />
+                            <input id="password"
+                                type="password" 
+                                value={this.state.password} 
+                                onChange={this.update('password')} 
+                                placeholder="Password"/>
+                            <button className="wbtn">{inputButtonText}</button>
+                            <div className="sub-text-box">
+                                <small className="subtle-text">
+                                    {subText}
+                                    {altLink}
+                                </small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="img-container">
+                    <img src={window.loginImageUrl}/>
                 </div>
             </div>
         )

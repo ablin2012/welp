@@ -10,7 +10,7 @@ class BusinessMap extends React.Component {
         // this.props.fetchAllBusinesses();
         const mapOptions = (this.props.centerLat) ? (
             {center: { lat: parseFloat(this.props.centerLat), lng: parseFloat(this.props.centerLng)},
-            zoom: 13}
+            zoom: 15}
             ) : (
             {center: { lat: 37.7758, lng: -122.435 },
             // center: {lat: parseFloat(this.props.businesses[0].lat), lng: parseFloat(this.props.businesses[0].lng)},
