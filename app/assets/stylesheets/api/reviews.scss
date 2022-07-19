@@ -1,3 +1,118 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review-container {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.author-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.review-body {
+    font-size: 14px;
+    color: gray;
+    padding-top: 10px;
+}
+
+
+.profile-pic {
+    background-color: bisque;
+    height: 76px;
+    width: 76px;
+    border-radius: 38px;
+    margin-right: 15px;
+}
+.stars.small-zero {
+    background-position: 0px -320px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-one {
+    background-position: 0px -360px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-one-half {
+    background-position: 0px -340px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-two {
+    background-position: 0px -400px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-two-half {
+    background-position: 0px -380px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-three {
+    background-position: 0px -440px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-three-half {
+    background-position: 0px -420px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-four {
+    background-position: 0px -480px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-four-half {
+    background-position: 0px -460px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+.stars.small-five {
+    background-position: 0px -500px;
+    margin-top: 8px;
+    width: 100%;
+    height: 20px;
+}
+
+.stars.tiny-one {
+    background-position: 0px -440px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}
+.stars.tiny-two {
+    background-position: 0px -420px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}
+.stars.tiny-three {
+    background-position: 0px -480px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}
+.stars.tiny-four {
+    background-position: 0px -460px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}
+.stars.tiny-five {
+    background-position: 0px -500px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}

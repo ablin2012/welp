@@ -118,7 +118,7 @@ h3 {
 .show-body {
     padding-top: 25px;
     display: flex;
-    width: 80%;
+    width: 80vw;
 }
 
 .btn-list {
@@ -141,7 +141,9 @@ h3 {
 
 .show-info-container {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    flex-direction: column;
     padding-top: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid #ebebeb;
@@ -154,26 +156,36 @@ h3 {
         justify-content: left;
         flex-direction: row;
         width: 50%;
-        // .days {
-        //     width: 40%;
-        // }
-        // .hours {
-        //     width: 40%;
-        // }
     }
-    .show-info-left {
+    .days {
+        width: 20%;
         display: flex;
         flex-direction: column;
-        width: 50%;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        .days {
-            width: 10px;
-        }
-        .hours {
-            width: 100px;
+        div {
+            padding-top: 10px;
         }
     }
+    .hours {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        div {
+            padding-top: 10px;
+        }
+    }
+}
+
+.show-info-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.show-info-main {
+    display: flex;
+    padding-top: 20px;
 }
 
 .show-reviews-container {
@@ -213,6 +225,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding-top: 20px;
     a {
         text-decoration: none;
         font-weight: bold;

@@ -52,9 +52,7 @@ class BusinessShow extends React.Component{
                         {business.zipCode}
                     </small>
                 </div>
-        </>
-        )
-        const businesses = business;
+        </>)
         return (
             <div className="business-show-page">
                 <div className="show-header" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[0] + ')'}}>
@@ -70,49 +68,49 @@ class BusinessShow extends React.Component{
                             <Link to={`/businesses/${businessId}/reviews/new`}><button className="wbtn"><i className="far fa-star" /> Write a Review</button></Link>
                         </div>
                         <div className="show-info-container">
-                            <div className="show-info-left">
-                                <h2>Location & Hours</h2>
-                                <BusinessMap mapType="single-map-container"
-                                    centerLat={business.lat}
-                                    centerLng={business.lng}
-                                    fetchBusiness={fetchBusiness} 
-                                    singleBusiness={true} 
-                                    businesses={[business]} 
-                                    businessId={businessId}/>
-                                <div className="show-info-address">
-                                    <small>
-                                        <a href={`https://www.google.com/maps?q=${business.lat},${business.lng}`} target="_blank">{business.address}</a>
-                                    </small>
-                                    <small>
-                                        {business.city}, {business.state} {business.zipCode}
-                                    </small>
+                            <h2>Location & Hours</h2>
+                            <div className="show-info-main">
+                                <div className="show-info-left">
+                                    <BusinessMap mapType="single-map-container"
+                                        centerLat={business.lat}
+                                        centerLng={business.lng}
+                                        fetchBusiness={fetchBusiness} 
+                                        singleBusiness={true} 
+                                        businesses={[business]} 
+                                        businessId={businessId}/>
+                                    <div className="show-info-address">
+                                        <small>
+                                            <a href={`https://www.google.com/maps?q=${business.lat},${business.lng}`} target="_blank">{business.address}</a>
+                                        </small>
+                                        <small>
+                                            {business.city}, {business.state} {business.zipCode}
+                                        </small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="show-info-right">
-                                <div className="hours-list">
+                                <div className="show-info-right">
                                     <div className="days">
-                                        <p>Mon</p>
-                                        <p>Tue</p>
-                                        <p>Wed</p>
-                                        <p>Thur</p>
-                                        <p>Fri</p>
-                                        <p>Sat</p>
-                                        <p>Sun</p>
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thur</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                        <div>Sun</div>
                                     </div>
                                     <div className="hours">
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
-                                        <p>{business.hours}</p>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
+                                        <div>{business.hours}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="show-reviews-container">
-                            <h3>Recommended Reviews</h3>
+                            <div><h3>Recommended Reviews</h3></div>
                             <ReviewsIndexContainer />
                         </div>
                     </div>

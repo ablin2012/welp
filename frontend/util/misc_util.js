@@ -31,3 +31,18 @@ export const avgRatingClass = (avgRating) => {
         return 'small-five';
     }
 }
+
+export const ratingClass = (rating) => {
+    let rate = parseFloat(rating);
+    if (rate > 0.5 && rate <= 1) {
+        return 'tiny-one';
+    } else if (rate > 1 && rate <= 2) {
+        return 'tiny-two';
+    } else if (rate > 2 && rate <= 3) {
+        return 'tiny-three';
+    } else if (rate > 3 && rate <= 4) {
+        return 'tiny-four';
+    } else {
+        return 'tiny-five';
+    }
+}

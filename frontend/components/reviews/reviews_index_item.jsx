@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { avgRatingClass } from "../../util/misc_util"
 
 class ReviewsIndexItem extends React.Component {
     constructor(props) {
@@ -20,6 +21,8 @@ class ReviewsIndexItem extends React.Component {
 
     render() {
         let {review, user, currentUserId} = this.props;
+        let rateClass = avgRatingClass(review.rating);
+        let lname = user.lastName.slice(0,1) + '.';
         let deleteButton = (review.userId === currentUserId) ? (
             <div>
                 <button onClick={this.deleteReview}>delete</button>
@@ -31,9 +34,12 @@ class ReviewsIndexItem extends React.Component {
         return (
             <div className="review-container">
                 <div className="review-info">
-                    <h2>{user.firstName}</h2>
-                    <h3>{review.rating}</h3>
-                    <p>{review.body}</p>
+                    <div className="author-info">
+                        <div className="profile-pic"></div>
+                        <h2>{user.firstName} {lname}</h2>
+                    </div>
+                    <div className={`stars ${rateClass}`}></div>
+                    <div className="review-body">{review.body}</div>
                     {deleteButton}
                 </div>
             </div>
