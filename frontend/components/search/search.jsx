@@ -7,13 +7,8 @@ class Search extends React.Component {
         super(props);
     }
 
-    // componentDidMount () {
-    //     console.log('working')
-    //     this.props.fetchBusinesses();
-    // }
-
     render () {
-        let {businesses, updateFilter, fetchAllBusinesses} = this.props
+        let {businesses, updateFilter} = this.props
         return (
             <div className="search-page">
                 <BusinessIndex businesses={businesses}/>
@@ -22,7 +17,6 @@ class Search extends React.Component {
                         businesses={businesses} 
                         updateFilter={updateFilter} 
                         singleBusiness={false}
-                        // fetchAllBusinesses={fetchAllBusinesses}
                         />
                 </div>
             </div>

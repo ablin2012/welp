@@ -4,8 +4,17 @@ import ReviewsIndexContainer from "../reviews/reviews_index_container";
 class ReviewForm extends React.Component {
     constructor(props){
         super(props);
-        this.state = this.props.review;
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.state = {
+            business_id: this.props.review.business_id,
+            rating: this.props.review.rating,
+            body: this.props.review.body,
+            numStars: 'zero',
+            permStars: null
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleHover = this.handleHover.bind(this);
+        this.handleUnhover = this.handleUnhover.bind(this);
     }
 
     componentDidMount() {
@@ -15,16 +24,50 @@ class ReviewForm extends React.Component {
     }
 
     update(field) {
-        return e => {this.setState({[field]: e.target.value})}
+        return e => {this.setState({[field]: e.currentTarget.value})}
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.submitReview(this.state);
+        let finalReview = Object.assign({}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
+        this.props.submitReview(finalReview);
+    }
+
+    handleHover(numStr) {
+        return () => this.setState({numStars: numStr})
+    }
+
+    handleUnhover() {
+        if (this.state.permStars) {
+            return () => this.setState({numStars: this.state.permStars});
+        } else {
+            return () => this.setState({numStars: 'zero'});
+        }
+    }
+
+    handleClick(numStr, rating) {
+        return () => {
+            this.setState({permStars: numStr, rating: rating});
+        }
     }
 
     render() {
         let {formType, business} = this.props;
+        let {numStars} = this.state;
+        let radioText;
+        if (numStars === 'zero') {
+            radioText = 'Select a Rating';
+        } else if (numStars === 'one') {
+            radioText = 'Not Good';
+        } else if (numStars === 'two') {
+            radioText = 'Could\'ve been better';
+        } else if (numStars === 'three') {
+            radioText = 'OK';
+        } else if (numStars === 'four') {
+            radioText = 'Good';
+        } else if (numStars === 'five') {
+            radioText = 'Great'
+        }
         if (!business) {
             return null;
         }
@@ -36,33 +79,39 @@ class ReviewForm extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-inputs">
                                 <fieldset className="rating-selector">
-                                    <ul className="stars">
+                                    <ul className={`stars ${this.state.numStars}`}>
                                         <li className="star">
                                             <div className="star-wrapper">
-                                                <input className="star-input" type="radio" name="rating" value={1} onClick={this.update('rating')} />
+                                                <input className="star-input" type="radio" name="rating" onClick={this.handleClick('one', 1)} 
+                                                    onMouseEnter={this.handleHover('one')} onMouseLeave={this.handleUnhover()}/>
                                             </div>
                                         </li>
                                         <li className="star">
                                             <div className="star-wrapper">
-                                                <input className="star-input" type="radio" name="rating" value={2} onClick={this.update('rating')} />
+                                                <input className="star-input" type="radio" name="rating" onClick={this.handleClick('two', 2)} 
+                                                    onMouseEnter={this.handleHover('two')} onMouseLeave={this.handleUnhover()}/>
                                             </div>
                                         </li>
                                         <li className="star">
                                             <div className="star-wrapper">
-                                                <input className="star-input" type="radio" name="rating" value={3} onClick={this.update('rating')} />
+                                                <input className="star-input" type="radio" name="rating" onClick={this.handleClick('three', 3)}
+                                                    onMouseEnter={this.handleHover('three')} onMouseLeave={this.handleUnhover()}/>
                                             </div>
                                         </li>
                                         <li className="star">
                                             <div className="star-wrapper">
-                                                <input className="star-input" type="radio" name="rating" value={4} onClick={this.update('rating')} />
+                                                <input className="star-input" type="radio" name="rating" onClick={this.handleClick('four', 4)}
+                                                    onMouseEnter={this.handleHover('four')} onMouseLeave={this.handleUnhover()}/>
                                             </div>
                                         </li>
                                         <li className="star">
-                                            <div className="star-wrapper">
-                                                <input className="star-input" type="radio" name="rating" value={5} onClick={this.update('rating')} />
+                                            <div className="star-wrapper five">
+                                                <input className="star-input" type="radio" name="rating" onClick={this.handleClick('five', 5)}
+                                                    onMouseEnter={this.handleHover('five')} onMouseLeave={this.handleUnhover()}/>
                                             </div>
                                         </li>
                                     </ul>
+                                    {radioText}
                                 </fieldset>
                                 <textarea type="text" 
                                     value={this.state.body} 

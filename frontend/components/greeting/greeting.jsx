@@ -5,14 +5,14 @@ class Greeting extends React.Component {
     render(){
         let {currentUser, logout} = this.props;
         const display = currentUser ? (
-            <div>
-                <p>Welcome, {currentUser.firstName}!</p>
+            <div className="login-buttons">
+                <small>Welcome, {currentUser.firstName}!</small>
                 <button className="wbtn" onClick={logout}>Logout</button>
             </div>
         ) : (
             <div className="login-buttons">
-                <Link className="wbtn" to="/signup">Sign Up</Link>
-                <Link className="wbtn" to="/login">Log In</Link>
+                <Link to="/signup"><button className="wbtn">Sign Up</button></Link>
+                <Link to="/login"><button className="wbtn">Log In</button></Link>
             </div>
         )
         return (

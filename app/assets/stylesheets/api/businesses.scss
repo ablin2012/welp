@@ -124,7 +124,7 @@ h3 {
 .btn-list {
     display: flex;
     padding-bottom: 25px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #ebebeb;
 }
 
 .show-content {
@@ -144,7 +144,7 @@ h3 {
     flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #ebebeb;
     h2 {
         font-size: 24px;
         font-weight: bold;
@@ -187,7 +187,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
     border-radius: 4px;
     min-height: 100px;
     max-height: 200px;
@@ -198,7 +198,7 @@ h3 {
         color: #027a97;
     }
     .bottom-border {
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid #ebebeb;
     }
     .module {
         display: flex;
@@ -217,5 +217,13 @@ h3 {
         text-decoration: none;
         font-weight: bold;
         color: #027a97;
+    }
+}
+
+.review-sub {
+    padding-top: 10px;
+    small {
+        font-size: 12px;
+        color: gray;
     }
 }

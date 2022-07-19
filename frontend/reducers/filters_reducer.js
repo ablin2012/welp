@@ -1,7 +1,10 @@
 import { UPDATE_FILTER } from '../actions/filter_actions'
 
 const defaultFilters = Object.freeze({
-  bounds: {}
+  bounds: {},
+  name: '',
+  price: '',
+  category: ''
 });
 
 const filtersReducer = (state = defaultFilters, action) => {

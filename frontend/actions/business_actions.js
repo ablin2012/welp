@@ -48,11 +48,6 @@ export const fetchBusinesses = (filters) => dispatch => {
         .then((businesses) => dispatch(receiveBusinesses(businesses)))
 }
 
-// export const fetchAllBusinesses = () => dispatch => {
-//     return BusinessAPIUtil.fetchAllBusinesses()
-//         .then((businesses) => dispatch(receiveBusinesses(businesses)))
-// }
-
 export const fetchBusiness = (id) => dispatch => {
     return BusinessAPIUtil.fetchBusiness(id)
         .then((payload) => dispatch(receiveBusiness(payload)))

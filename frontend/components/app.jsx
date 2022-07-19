@@ -15,9 +15,13 @@ const App = () => {
     return (
         <div>
             <header className="header">
-                <Link to="/" ><img src={window.logoUrl}/></Link>
-                <SearchBarContainer />
-                <GreetingContainer />
+                <div className="header-left">
+                    <Link to="/" ><img className="logo" src={window.logoUrl}/></Link>
+                    <SearchBarContainer />
+                </div>
+                <div className="header-right">
+                    <GreetingContainer />
+                </div>
             </header>
             <Switch>
                 <AuthRoute path="/login" component={LoginFormContainer} />

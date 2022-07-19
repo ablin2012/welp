@@ -22,7 +22,10 @@ class BusinessShow extends React.Component{
         if (!business) {
             return null;
         }
-        let websiteStr = shortenStr(business.website, 20);
+        let websiteStr;
+        if (business.website) {
+            websiteStr = shortenStr(business.website, 20);
+        }
         let sidebar = (business.website) ? (
             <>
                 <div className="module bottom-border"><a href={business.website} target="_blank">{websiteStr}</a></div>
@@ -39,11 +42,15 @@ class BusinessShow extends React.Component{
             </>
         ) : (
             <>
-                <div className="bottom-border" >{business.phone}</div>
-                <div>
-                    <h2>Get Directions</h2>
-                    {business.address} {business.city}, {business.state}
-                    {business.zip_code}
+                <div className="module bottom-border">{business.phone}</div>
+                <div className="module">
+                    <a href={`https://www.google.com/maps?q=${business.lat},${business.lng}`} target="_blank">Get Directions</a>
+                    <small>
+                        {business.address} {business.city}, {business.state}
+                    </small>
+                    <small>
+                        {business.zipCode}
+                    </small>
                 </div>
         </>
         )

@@ -28,18 +28,14 @@ class BusinessMap extends React.Component {
         this.MarkerManager.updateMarkers(this.props.businesses);
     }
 
-    componentDidUpdate() {
-        // if (this.props.singleBusiness) {
-        //     const targetBusinessKey = Object.keys(this.props.businesses)[0];
-        //     const targetBusiness = this.props.businesses[targetBusinessKey];
-        //     this.MarkerManager.updateMarkers([targetBusiness]); //grabs only that one business
-        //   } else {
+    componentDidUpdate(prevProps) {
+        // if (prevProps.businesses.length === 0) {
             this.MarkerManager.updateMarkers(this.props.businesses);
-          // }
+        // }
     }
 
     registerListeners() {
-        google.maps.event.addListener(this.map, 'idle', () => {
+        google.maps.event.addListenerOnce(this.map, 'idle', () => {
           const { north, south, east, west } = this.map.getBounds().toJSON();
           const bounds = {
             northEast: { lat: north, lng: east },

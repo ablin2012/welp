@@ -15,4 +15,8 @@ class Business < ApplicationRecord
             .where("lng > ?", bounds[:southWest][:lng])
             .where("lng < ?", bounds[:northEast][:lng])
     end
+
+    def average_rating
+        reviews.average(:rating)
+    end
 end

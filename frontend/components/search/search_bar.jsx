@@ -1,6 +1,7 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
+const CATEGORIES = ['']
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -10,20 +11,30 @@ class SearchBar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log('working');
         this.props.history.push('/search');
+        this.props.updateFilter('name', this.state.name);
     }
 
     update(field) {
         return e => {this.setState({[field]: e.target.value})}
     }
     render() {
+        let {updateFilter} = this.props
         return(
-            <div>
-                <form onSubmit={this.handleSubmit} >
-                    <input type="text" value={this.state.name} onChange={this.update('name')} />
-                    <input type="text" value={this.state.location} onChange={this.update('location')} />
-                    <button className="wbtn">Search</button>
+            <div className="search-bar">
+                <form onSubmit={this.handleSubmit} className="search-bar" >
+                    <input className="search-input" 
+                        type="text" 
+                        value={this.state.name} 
+                        onChange={this.update('name')} 
+                        placeholder="landmarks, cheap, Chubby Noodle"/>
+                    <input className="search-input" 
+                        type="text" 
+                        value={this.state.location} 
+                        onChange={this.update('location')} 
+                        placeholder="SF, San Francisco"/>
+                    {/* <Link to='/search'><button className="wbtn">Search</button></Link> */}
+                    <button className="wbtn"><i className="fas fa-search"></i></button>
                 </form>
             </div>
         )
