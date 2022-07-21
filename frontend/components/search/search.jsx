@@ -1,5 +1,4 @@
 import React from "react";
-import { updateFilter } from "../../actions/filter_actions";
 import BusinessIndex from "../business/business_index";
 import BusinessMap from "../business/business_map";
 
@@ -9,11 +8,18 @@ class Search extends React.Component {
         this.handleFilter = this.handleFilter.bind(this);
     }
 
+    componentDidMount(){
+        if (this.props.location.search) {
+            this.props.updateFilter('name', this.props.location.search.slice(1))
+        }
+    }
+
     handleFilter(filter, value) {
         return () => this.props.updateFilter(filter, value);
     }
 
     render () {
+        console.log(this.props.location.search)
         let {businesses, updateFilter} = this.props
         return (
             <div className="search-page">

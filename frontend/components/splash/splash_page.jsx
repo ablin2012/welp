@@ -1,4 +1,6 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class SplashPage extends React.Component {
     constructor(props) {
@@ -60,30 +62,46 @@ class SplashPage extends React.Component {
                 <div className="category-buttons">
                     <h1>Categories</h1>
                     <div className="category-main">
-                        <div className="category-button bubble-tea">
-                            <h3>Bubble Tea</h3>
-                        </div>
-                        <div className="category-button landmarks">
-                            <h3>Landmarks</h3>
-                        </div>
-                        <div className="category-button bakeries">
-                            <h3>Bakeries</h3>
-                        </div>
-                        <div className="category-button parks">
-                            <h3>Parks</h3>   
-                        </div>
-                        <div className="category-button mexican">
-                            <h3>Mexican</h3>
-                        </div>
-                        <div className="category-button korean">
-                            <h3>Korean</h3>
-                        </div>
-                        <div className="category-button groceries">
-                            <h3>Groceries</h3>
-                        </div>
-                        <div className="category-button american">
-                            <h3>American</h3>
-                        </div>
+                        <Link to='/search/?bubble'>
+                            <button className="category-button bubble-tea">
+                                <h3>Bubble Tea</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?landmark'>
+                            <button className="category-button landmarks">
+                                <h3>Landmarks</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?bakeries'>
+                            <button className="category-button bakeries">
+                                <h3>Bakeries</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?park'>
+                            <button className="category-button parks">
+                                <h3>Parks</h3>   
+                            </button>
+                        </Link>
+                        <Link to='/search/?mexican'>
+                            <button className="category-button mexican">
+                                <h3>Mexican</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?korean'>
+                            <button className="category-button korean">
+                                <h3>Korean</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?grocery'>
+                            <button className="category-button groceries">
+                                <h3>Groceries</h3>
+                            </button>
+                        </Link>
+                        <Link to='/search/?american'>
+                            <button className="category-button american">
+                                <h3>American</h3>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -91,4 +109,4 @@ class SplashPage extends React.Component {
     }
 }
 
-export default SplashPage;
+export default withRouter(SplashPage);

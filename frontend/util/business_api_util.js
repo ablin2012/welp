@@ -43,6 +43,7 @@ export const deleteReview = (reviewId) => {
 }
 
 export const updateReview = (review) => {
+    console.log(review)
     return $.ajax({
         method: 'PATCH',
         url: `/api/reviews/${review.id}`,

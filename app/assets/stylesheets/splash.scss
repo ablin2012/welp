@@ -45,10 +45,11 @@
     opacity: 1;
     transition: opacity 2s linear;
     width: 500px;
+    font-weight: 500;
     button {
         width: 240px;
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 700;
         margin-top: 30px;
     }
 }
@@ -64,15 +65,19 @@
 
 .category-main {
     display: flex;
+    font-weight: 700;
     padding-top: 40px;
     flex-wrap: wrap;
     justify-content: space-around;
+    * {
+        text-decoration: none;
+    }
 }
 
 .category-button {
     color: white;
-    font-weight: bold;
-    -webkit-text-stroke: 0.2px black;
+    font-weight: 700;
+    -webkit-text-stroke: 0.5px black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +89,7 @@
     margin: 20px;
     cursor: pointer;
     background-size: cover;
+    text-decoration: none;
 }
 
 .bubble-tea {

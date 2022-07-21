@@ -13,10 +13,6 @@ class BusinessShow extends React.Component{
         this.props.fetchBusiness(this.props.businessId);   
     }
 
-    componentWillUnmount() {
-        this.props.removeReviews();
-    }
-
     render() {
         let {business, fetchBusiness, businessId} = this.props;
         if (!business) {

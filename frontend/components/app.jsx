@@ -21,7 +21,8 @@ const App = () => {
             position: 'absolute', 
             border: 'none',
             top: 0,
-            left: 0
+            left: 0,
+            color: 'white'
         };
         logo = window.whiteLogoUrl;
     } else {

@@ -5,7 +5,7 @@ class ReviewForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            business_id: this.props.review.businessId,
+            business_id: this.props.review.business_id,
             rating: this.props.review.rating,
             body: this.props.review.body,
             numStars: 'zero',
@@ -17,13 +17,34 @@ class ReviewForm extends React.Component {
         this.handleUnhover = this.handleUnhover.bind(this);
     }
 
+    componentDidMount() {
+        let {rating} = this.props.review;
+        if (this.props.formType === 'Update Review') {
+            if (rating === 1) {
+                this.setState({permStars: 'one', numStars: 'one'})
+            } else if (rating === 2) {
+                this.setState({permStars: 'two', numStars: 'two'})
+            } else if (rating === 3) {
+                this.setState({permStars: 'three', numStars: 'three'})
+            } else if (rating === 3) {
+                this.setState({permStars: 'four', numStars: 'four'})
+            } else {
+                this.setState({permStars: 'five', numStars: 'five'})
+            }
+        }
+    }
     update(field) {
         return e => {this.setState({[field]: e.currentTarget.value})}
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        let finalReview = Object.assign({}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
+        let finalReview;
+        if (this.props.formType === 'Update Review') {
+            finalReview = Object.assign({}, {id: this.props.review.id}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
+        } else {
+            finalReview = Object.assign({}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
+        }
         // debugger;
         this.props.submitReview(finalReview);
     }
