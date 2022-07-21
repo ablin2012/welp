@@ -35,7 +35,8 @@ class ReviewsIndexItem extends React.Component {
             <div className="review-container">
                 <div className="review-info">
                     <div className="author-info">
-                        <div className="profile-pic"></div>
+                        <div className="profile-pic" style={{backgroundImage: 'url(' + user.photoUrl + ')'}}>
+                        </div>
                         <h2>{user.firstName} {lname}</h2>
                     </div>
                     <div className={`stars ${rateClass}`}></div>

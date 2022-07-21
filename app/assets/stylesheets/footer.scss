@@ -1,0 +1,23 @@
+.footer {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: space-around;
+    padding: 45px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    h3 {
+        font-size: 16px;
+    }
+}
+.footer-link {
+    padding-top: 10px;
+    color: #6e7072;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}

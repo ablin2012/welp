@@ -2,7 +2,7 @@ import React from "react";
 import ReviewsIndexContainer from "../reviews/reviews_index_container";
 import BusinessMap from "./business_map";
 import { Link } from "react-router-dom";
-import { shortenStr } from "../../util/misc_util";
+import { shortenStr, avgRatingBigClass } from "../../util/misc_util";
 
 class BusinessShow extends React.Component{
     constructor(props){
@@ -53,12 +53,14 @@ class BusinessShow extends React.Component{
                     </small>
                 </div>
         </>)
+        let avgClass = avgRatingBigClass(business.avgRating);
         return (
             <div className="business-show-page">
-                <div className="show-header" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[0] + ')'}}>
+                <div className="show-header" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[0] + '), url(' + business.photoUrls[1] + '), url(' + business.photoUrls[2] + ')'}}>
                     <div className="show-header-text">
                         <h1>{business.name}</h1>
-                        <div>{business.price} {business.category}</div>
+                        <div className={`stars ${avgClass}`}></div>
+                        <div>{business.price}  &#8226;  {business.category}</div>
                         <div>Open {business.hours}</div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@ class BusinessShow extends React.Component{
                             <Link to={`/businesses/${businessId}/reviews/new`}><button className="wbtn"><i className="far fa-star" /> Write a Review</button></Link>
                         </div>
                         <div className="show-info-container">
-                            <h2>Location & Hours</h2>
+                            <h3>Location & Hours</h3>
                             <div className="show-info-main">
                                 <div className="show-info-left">
                                     <BusinessMap mapType="single-map-container"

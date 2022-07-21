@@ -1,14 +1,17 @@
 .form-container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .form {
     display: flex;
     width: 80%;
+    height: 100vh;
     justify-content: center;
     padding: 20px;
+    position: sticky;
+    top: 100.5px;
 }
 
 .inner-form {
@@ -74,6 +77,52 @@
 .stars.five {
     background-position: 0px -288px;
 }
+.stars.one-big {
+    background-position: 0px -64px;
+    width: 100%;
+    height: 32px;
+}
+.stars.two-big {
+    background-position: 0px -128px;
+    width: 100%;
+    height: 32px;
+}
+.stars.three-big {
+    background-position: 0px -192px;
+    width: 100%;
+    height: 32px;
+}
+.stars.four-big {
+    background-position: 0px -256px;
+    width: 100%;
+    height: 32px;
+}
+.stars.five-big {
+    background-position: 0px -288px;
+    width: 100%;
+    height: 32px;
+}
+.stars.one-half {
+    background-position: 0px -32px;
+    width: 100%;
+    height: 32px;
+}
+.stars.two-half {
+    background-position: 0px -96px;
+    width: 100%;
+    height: 32px;
+}
+.stars.three-half {
+    background-position: 0px -160px;
+    width: 100%;
+    height: 32px;
+}
+.stars.four-half {
+    background-position: 0px -224px;
+    width: 100%;
+    height: 32px;
+}
+
 
 .star {
     float: left;
@@ -104,7 +153,6 @@
     display: flex;
     width: 20%;
     flex-wrap: wrap;
-    flex-direction: column;
     border-left: 1px solid #ebebeb;
 }
 

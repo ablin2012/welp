@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-const CATEGORIES = ['']
+const KEYWORDS = {expensive: '$$$$', cheap: '$', affordable: '$$'}
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +12,13 @@ class SearchBar extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.history.push('/search');
-        this.props.updateFilter('name', this.state.name);
+        let filter;
+        if (this.state.name in KEYWORDS) {
+            filter = KEYWORDS[this.state.name];
+        } else {
+            filter = this.state.name;
+        }
+        this.props.updateFilter('name', filter);
     }
 
     update(field) {

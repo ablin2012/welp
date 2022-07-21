@@ -5,7 +5,7 @@ class ReviewForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            business_id: this.props.review.business_id,
+            business_id: this.props.review.businessId,
             rating: this.props.review.rating,
             body: this.props.review.body,
             numStars: 'zero',
@@ -17,12 +17,6 @@ class ReviewForm extends React.Component {
         this.handleUnhover = this.handleUnhover.bind(this);
     }
 
-    componentDidMount() {
-        if (this.props.formType === 'Post Review') {
-            this.props.fetchBusiness(this.props.businessId);  
-        }
-    }
-
     update(field) {
         return e => {this.setState({[field]: e.currentTarget.value})}
     }
@@ -30,6 +24,7 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let finalReview = Object.assign({}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
+        // debugger;
         this.props.submitReview(finalReview);
     }
 
@@ -52,7 +47,7 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        let {formType, business} = this.props;
+        let {formType, review} = this.props;
         let {numStars} = this.state;
         let radioText;
         if (numStars === 'zero') {
@@ -68,14 +63,11 @@ class ReviewForm extends React.Component {
         } else if (numStars === 'five') {
             radioText = 'Great'
         }
-        if (!business) {
-            return null;
-        }
         return (
             <div className="form-container">
                 <div className="form">
                     <div className="inner-form">
-                        <h1>{business.name}</h1>
+                        <h1>{review.businessName}</h1>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-inputs">
                                 <fieldset className="rating-selector">

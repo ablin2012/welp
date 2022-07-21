@@ -32,6 +32,32 @@ export const avgRatingClass = (avgRating) => {
     }
 }
 
+export const avgRatingBigClass = (avgRating) => {
+    if (avgRating === null) {
+        return 'zero';
+    }
+    let avg = parseFloat(avgRating);
+    if (avg > 0.5 && avg <= 1) {
+        return 'one-big';
+    } else if (avg > 1 && avg <= 1.5) {
+        return 'one-half';
+    } else if (avg > 1.5 && avg <= 2) {
+        return 'two-big';
+    } else if (avg > 2 && avg <= 2.5) {
+        return 'two-half';
+    } else if (avg > 2.5 && avg <= 3) {
+        return 'three-big';
+    } else if (avg > 3 && avg <= 3.5) {
+        return 'three-half';
+    } else if (avg > 3.5 && avg <= 4) {
+        return 'four-big';
+    } else if (avg > 4 && avg <= 4.5) {
+        return 'four-half';
+    } else {
+        return 'five-big';
+    }
+}
+
 export const ratingClass = (rating) => {
     let rate = parseFloat(rating);
     if (rate > 0.5 && rate <= 1) {

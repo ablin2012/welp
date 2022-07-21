@@ -14,7 +14,7 @@ class IndexItem extends React.Component {
         let reviewInfo = (business.avgRating) ? (
             <div className="review-sub">
                 <small>
-                    <i class="far fa-comment-alt"></i> "{firstRev}"
+                    <i className="far fa-comment-alt"></i> "{firstRev}"
                 </small>
             </div>
         ) : (
@@ -24,7 +24,7 @@ class IndexItem extends React.Component {
         )
         let websiteButton = (business.website) ? (
             <div className="listing-btn">
-                <button className="wbtn white"><a href={business.website}>View Website</a></button>
+                <button className="wbtn white"><a className="website-button" href={business.website}>View Website</a></button>
             </div>
         ) : (null)
         return (
@@ -40,9 +40,10 @@ class IndexItem extends React.Component {
                             <h2>{idx + 1}. {business.name}</h2>
                             <div className={`stars ${avgClass}`}></div>
                             <div className="listing-info">
-                                <p>{business.category}</p>
-                                <p>{business.price}</p>
-                                <p>{business.city}</p>
+                                <div className="category-label">{business.category}</div>
+                                <div className="sub-text">{business.price}</div>
+                                <div className="sub-text">&#8226;</div>
+                                <div className="sub-text">{business.city}</div>
                             </div>
                             <div className="listing-hours">Open {business.hours}</div>
                             {reviewInfo}

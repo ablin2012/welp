@@ -16,6 +16,7 @@ end
 json.users do
     json.set! review.user.id do
       json.extract! review.user, :id, :first_name, :last_name
+      json.photoUrl url_for(review.user.photo)
     end
   end
 end

@@ -11,7 +11,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #ebebeb;
     img {
         padding-top: 10px;
         height: 45px;
@@ -30,7 +30,7 @@ h1 {
 }
 
 .search-bar {
-    // background-color: red;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;

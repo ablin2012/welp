@@ -1,0 +1,116 @@
+.eye-catcher {
+    display: flex;
+    width: 100%;
+    height: 682px;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+}
+
+.eye-catcher.first {
+    background-image: image-url("stock_img_1.jpg");
+    opacity: 1.0;
+    -webkit-transition: background 1.5s linear;
+    -moz-transition: background 1.5s linear;
+    -o-transition: background 1.5s linear;
+    -ms-transition: background 1.5s linear;
+    transition: background 1.5s linear;
+}
+.eye-catcher.second {
+    background-image: image-url("stock_img_2.jpg");
+    opacity: 1.0;
+    -webkit-transition: background 1.5s linear;
+    -moz-transition: background 1.5s linear;
+    -o-transition: background 1.5s linear;
+    -ms-transition: background 1.5s linear;
+    transition: background 1.5s linear;
+}
+.eye-catcher.third {
+    background-image: image-url("stock_img_3.jpg");
+    opacity: 1.0;
+    -webkit-transition: background 1.5s linear;
+    -moz-transition: background 1.5s linear;
+    -o-transition: background 1.5s linear;
+    -ms-transition: background 1.5s linear;
+    transition: background 1.5s linear;
+}
+
+
+.eye-catcher-main {
+    padding-left: 100px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+    width: 500px;
+    button {
+        width: 240px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+}
+
+.category-buttons {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ebebeb;
+}
+
+.category-main {
+    display: flex;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category-button {
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 0.2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+    width: 20vw;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    margin: 20px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.bubble-tea {
+    background-image: image-url("bubble_tea.jpg");
+}
+.mexican {
+    background-image: image-url("mexican.jpg");
+}
+.landmarks {
+    background-image: image-url("landmarks.jpg");
+}
+.groceries {
+    background-image: image-url("groceries.jpg");
+}
+.bakeries {
+    background-image: image-url("bakeries.jpg");
+}
+.parks {
+    background-image: image-url("parks.jpg");
+}
+.korean {
+    background-image: image-url("korean.jpg");
+}
+.american {
+    background-image: image-url("american.jpg");
+}
+
+.category-button:hover {
+    box-shadow: 0 8px 32px #00000026;
+}

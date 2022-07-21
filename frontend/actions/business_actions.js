@@ -67,3 +67,8 @@ export const deleteReview = (reviewId) => dispatch => {
     return BusinessAPIUtil.deleteReview(reviewId)
         .then((payload) => dispatch(removeReview(payload.review.id)))
 }
+
+export const updateReview = (review) => dispatch => {
+    return BusinessAPIUtil.updateReview(review)
+        .then((review) => dispatch(receiveReview(review)))
+}

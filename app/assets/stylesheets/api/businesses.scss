@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .business-index {
-    width: 65%;
+    width: 700px;
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -12,6 +12,7 @@
     text-decoration: none;
     width: 100%;
     display: flex;
+    z-index: 0;
 }
 
 .listing-left {
@@ -39,12 +40,30 @@
     margin-bottom: 10px;
 }
 
+.category-label {
+    background-color: #ebebeb;
+    border-radius: 3px;
+    color: #6e7072;
+    padding: 2px;
+}
+
+.sub-text {
+    color: gray;
+}
+
+.listing-hours {
+    color: black;
+    font-size: 14px;
+}
+
 .listing-info {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    p {
-        padding: 10px 6px 10px 0px
+    align-items: center;
+    div {
+        margin: 10px 6px 10px 0px;
+        font-size: 14px;
     }
 }
 
@@ -53,7 +72,8 @@
     width: 100%;
     justify-content: right;
     padding-top: 10px;
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid #ebebeb;
+    z-index: 3;
 }
 
 .business-listing {
@@ -62,7 +82,7 @@
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 20px;
-    border: 1px solid lightgrey;
+    border: 1px solid #ebebeb;
     border-radius: 3px;
     h2 {
         font-size: 24px;
@@ -72,9 +92,9 @@
     p {
         color: black;
     }
-    div {
-        color: black;
-    }
+    // div {
+    //     color: black;
+    // }
 }
 
 .business-listing:hover {
@@ -89,7 +109,7 @@ h3 {
 .search-page {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
 }
 .show-header {
     display: flex;
@@ -107,6 +127,10 @@ h3 {
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 30px;
+    div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 .business-show-page {
@@ -239,4 +263,18 @@ h3 {
         font-size: 12px;
         color: gray;
     }
+}
+
+.website-button {
+    z-index: 3;
+}
+
+.filter-buttons {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: sticky;
+    top: 100.5px;
+    height: 100vh;
 }

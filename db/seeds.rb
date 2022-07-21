@@ -46,6 +46,14 @@ b1.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/chubby_noodle_main.jpeg'), 
     filename: 'chubby_noodle_main.jpeg'
 )
+b1.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/chubby_noodle_1.jpeg'), 
+    filename: 'chubby_noodle_1.jpeg'
+)
+b1.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/chubby_noodle_2.jpeg'), 
+    filename: 'chubby_noodle_2.jpeg'
+)
 
 b2 = Business.create!(
     name: 'Trader Joe\'s',
@@ -64,6 +72,14 @@ b2 = Business.create!(
 b2.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/trader_joes_main.jpeg'),
     filename: 'trader_joes_main.jpeg'
+)
+b2.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/trader_joes_1.jpeg'),
+    filename: 'trader_joes_1.jpeg'
+)
+b2.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/trader_joes_2.jpeg'),
+    filename: 'trader_joes_2.jpeg'
 )
 
 b3 = Business.create!(
@@ -84,6 +100,14 @@ b3.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/busters_cheesesteak_main.jpeg'),
     filename: 'busters_cheesesteak_main.jpeg'
 )
+b3.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/busters_cheesesteak_1.jpeg'),
+    filename: 'busters_cheesesteak_1.jpeg'
+)
+b3.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/busters_cheesesteak_2.jpeg'),
+    filename: 'busters_cheesesteak_2.jpeg'
+)
 
 b4 = Business.create!(
     name: 'Wong Lee Bakery',
@@ -102,6 +126,14 @@ b4.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/wong_lee_bakery_main.jpeg'),
     filename: 'wong_lee_bakery_main.jpeg'
 )
+b4.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/wong_lee_bakery_1.jpeg'),
+    filename: 'wong_lee_bakery_1.jpeg'
+)
+b4.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/wong_lee_bakery_2.jpeg'),
+    filename: 'wong_lee_bakery_2.jpeg'
+)
 
 b5 = Business.create!(
     name: 'Tancca',
@@ -119,6 +151,14 @@ b5 = Business.create!(
 b5.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tancca_main.jpeg'),
     filename: 'tancca_main.jpeg'
+)
+b5.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tancca_1.jpeg'),
+    filename: 'tancca_1.jpeg'
+)
+b5.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tancca_2.jpeg'),
+    filename: 'tancca_2.jpeg'
 )
 
 b6 = Business.create!(
@@ -139,6 +179,14 @@ b6.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/teaspoon_main.jpeg'),
     filename: 'teaspoon_main.jpeg'
 )
+b6.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/teaspoon_1.jpeg'),
+    filename: 'teaspoon_1.jpeg'
+)
+b6.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/teaspoon_2.jpeg'),
+    filename: 'teaspoon_2.jpeg'
+)
 
 b7 = Business.create!(
     name: 'Love Tea',
@@ -156,6 +204,14 @@ b7 = Business.create!(
 b7.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/love_tea_main.jpeg'),
     filename: 'love_tea_main.jpeg'
+)
+b7.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/love_tea_1.jpeg'),
+    filename: 'love_tea_1.jpeg'
+)
+b7.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/love_tea_2.jpeg'),
+    filename: 'love_tea_2.jpeg'
 )
 
 b8 = Business.create!(
@@ -176,6 +232,14 @@ b8.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/pandora_karaoke_main.jpeg'),
     filename: 'pandora_karaoke_main.jpeg'
 )
+b8.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/pandora_karaoke_1.jpeg'),
+    filename: 'pandora_karaoke_1.jpeg'
+)
+b8.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/pandora_karaoke_2.jpeg'),
+    filename: 'pandora_karaoke_2.jpeg'
+)
 
 b9 = Business.create!(
     name: 'Safeway',
@@ -194,6 +258,14 @@ b9 = Business.create!(
 b9.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/safeway_main.jpeg'),
     filename: 'safeway_main.jpeg'
+)
+b9.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/safeway_1.jpeg'),
+    filename: 'safeway_1.jpeg'
+)
+b9.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/safeway_2.jpeg'),
+    filename: 'safeway_2.jpeg'
 )
 
 b10 = Business.create!(
@@ -214,6 +286,14 @@ b10.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/palace_of_fine_arts_main.jpeg'),
     filename: 'palace_of_fine_arts_main.jpeg'
 )
+b10.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/palace_of_fine_arts_1.jpeg'),
+    filename: 'palace_of_fine_arts_1.jpeg'
+)
+b10.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/palace_of_fine_arts_2.jpeg'),
+    filename: 'palace_of_fine_arts_2.jpeg'
+)
 
 b11 = Business.create!(
     name: 'Crissy Field',
@@ -232,6 +312,14 @@ b11 = Business.create!(
 b11.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/crissy_field_main.jpeg'),
     filename: 'crissy_field_main.jpeg'
+)
+b11.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/crissy_field_1.jpeg'),
+    filename: 'crissy_field_1.jpeg'
+)
+b11.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/crissy_field_2.jpeg'),
+    filename: 'crissy_field_2.jpeg'
 )
 
 b12 = Business.create!(
@@ -252,6 +340,14 @@ b12.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/arsicault_bakery_main.jpeg'),
     filename: 'arsicault_bakery_main.jpeg'
 )
+b12.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/arsicault_bakery_1.jpeg'),
+    filename: 'arsicault_bakery_1.jpeg'
+)
+b12.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/arsicault_bakery_2.jpeg'),
+    filename: 'arsicault_bakery_2.jpeg'
+)
 
 b13 = Business.create!(
     name: 'The Mill',
@@ -270,6 +366,14 @@ b13 = Business.create!(
 b13.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/the_mill_main.jpeg'),
     filename: 'the_mill_main.jpeg'
+)
+b13.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/the_mill_1.jpeg'),
+    filename: 'the_mill_1.jpeg'
+)
+b13.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/the_mill_2.jpeg'),
+    filename: 'the_mill_2.jpeg'
 )
 
 b14 = Business.create!(
@@ -290,6 +394,14 @@ b14.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/golden_gate_park_main.jpeg'),
     filename: 'golden_gate_park_main.jpeg'
 )
+b14.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/golden_gate_park_1.jpeg'),
+    filename: 'golden_gate_park_1.jpeg'
+)
+b14.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/golden_gate_park_2.jpeg'),
+    filename: 'golden_gate_park_2.jpeg'
+)
 
 b15 = Business.create!(
     name: 'Son & Garden',
@@ -308,6 +420,14 @@ b15 = Business.create!(
 b15.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/son_and_garden_main.jpeg'),
     filename: 'son_and_garden_main.jpeg'
+)
+b15.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/son_and_garden_1.jpeg'),
+    filename: 'son_and_garden_1.jpeg'
+)
+b15.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/son_and_garden_2.jpeg'),
+    filename: 'son_and_garden_2.jpeg'
 )
 
 b16 = Business.create!(
@@ -328,6 +448,14 @@ b16.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/le_marais_main.jpeg'),
     filename: 'le_marais_main.jpeg'
 )
+b16.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/le_marais_1.jpeg'),
+    filename: 'le_marais_1.jpeg'
+)
+b16.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/le_marais_2.jpeg'),
+    filename: 'le_marais_2.jpeg'
+)
 
 b17 = Business.create!(
     name: 'Tacos El Patron',
@@ -345,6 +473,14 @@ b17 = Business.create!(
 b17.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tacos_el_patron_main.jpeg'),
     filename: 'tacos_el_patron_main.jpeg'
+)
+b17.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tacos_el_patron_1.jpeg'),
+    filename: 'tacos_el_patron_1.jpeg'
+)
+b17.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/tacos_el_patron_2.jpeg'),
+    filename: 'tacos_el_patron_2.jpeg'
 )
 
 b18 = Business.create!(
@@ -365,6 +501,14 @@ b18.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/um_ma_main.jpeg'),
     filename: 'um_ma_main.jpeg'
 )
+b18.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/um_ma_1.jpeg'),
+    filename: 'um_ma_1.jpeg'
+)
+b18.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/um_ma_2.jpeg'),
+    filename: 'um_ma_2.jpeg'
+)
 
 b19 = Business.create!(
     name: 'Senor Sisig',
@@ -383,6 +527,14 @@ b19 = Business.create!(
 b19.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/senor_sisig_main.jpeg'),
     filename: 'senor_sisig_main.jpeg'
+)
+b19.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/senor_sisig_1.jpeg'),
+    filename: 'senor_sisig_1.jpeg'
+)
+b19.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/senor_sisig_2.jpeg'),
+    filename: 'senor_sisig_2.jpeg'
 )
 
 b20 = Business.create!(
@@ -403,12 +555,24 @@ b20.photos.attach(
     io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/robin_main.jpeg'),
     filename: 'robin_main.jpeg'
 )
+b20.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/robin_1.jpeg'),
+    filename: 'robin_1.jpeg'
+)
+b20.photos.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_business_photos/robin_2.jpeg'),
+    filename: 'robin_2.jpeg'
+)
 
 u1 = User.create!(
     first_name: 'Guest',
     last_name: 'User',
     email: 'guest@email.com',
     password: '123456'
+)
+u1.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/guest.webp'), 
+    filename: 'guest.webp'
 )
 
 u2 = User.create!(
@@ -417,12 +581,20 @@ u2 = User.create!(
     email: 'aang@email.com',
     password: '123456'
 )
+u2.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/aang.png'), 
+    filename: 'aang.png'
+)
 
 u3 = User.create!(
     first_name: 'Katara',
     last_name: 'Waterbender',
     email: 'katara@email.com',
     password: '123456'
+)
+u3.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/katara.jpeg'), 
+    filename: 'katara.jpeg'
 )
 
 u4 = User.create!(
@@ -431,6 +603,10 @@ u4 = User.create!(
     email: 'zuko@email.com',
     password: '123456'
 )
+u4.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/zuko.jpeg'), 
+    filename: 'zuko.jpeg'
+)
 
 u5 = User.create!(
     first_name: 'Toph',
@@ -438,12 +614,21 @@ u5 = User.create!(
     email: 'toph@email.com',
     password: '123456'
 )
+u5.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/toph.jpeg'), 
+    filename: 'toph.jpeg'
+)
+
 
 u6 = User.create!(
     first_name: 'Sokka',
     last_name: 'Boomerang',
     email: 'sokka@email.com',
     password: '123456'
+)
+u6.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/sokka.png'), 
+    filename: 'sokka.png'
 )
 
 u7 = User.create!(
@@ -452,12 +637,20 @@ u7 = User.create!(
     email: 'mycabbages@email.com',
     password: '123456'
 )
+u7.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/cabbage_man.webp'), 
+    filename: 'cabbage_man.webp'
+)
 
 u8 = User.create!(
     first_name: 'Azula',
     last_name: 'Firelord',
     email: 'azula@email.com',
     password: '123456'
+)
+u8.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/azula.webp'), 
+    filename: 'azula.webp'
 )
 
 u9 = User.create!(
@@ -466,6 +659,10 @@ u9 = User.create!(
     email: 'suki@email.com',
     password: '123456'
 )
+u9.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/suki.jpeg'), 
+    filename: 'suki.jpeg'
+)
 
 u10 = User.create!(
     first_name: 'Iroh',
@@ -473,12 +670,20 @@ u10 = User.create!(
     email: 'iroh@email.com',
     password: '123456'
 )
+u10.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/iroh.jpeg'), 
+    filename: 'iroh.jpeg'
+)
 
 u11 = User.create!(
     first_name: 'Ozai',
     last_name: 'Firelord',
     email: 'ozai@email.com',
     password: '123456'
+)
+u11.photo.attach(
+    io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/ozai.png'), 
+    filename: 'ozai.png'
 )
 
 
