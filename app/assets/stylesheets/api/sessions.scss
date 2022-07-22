@@ -36,6 +36,11 @@
     }
 }
 
+.wbtn:hover {
+    -webkit-filter: brightness(110%);
+    transition-duration: 300ms;
+}
+
 .wbtn.black {
     background: #3c3c44;
     border: 1px solid #3c3c44;

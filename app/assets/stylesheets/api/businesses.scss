@@ -124,8 +124,9 @@ h3 {
 .show-header-image {
     height: 400px;
     width: 100%;
-    background-size: auto 100%;
-    // background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
     z-index: -1;
 }
 
