@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    before_validation :ensure_user_photo
     after_initialize :ensure_session_token
 
     has_one_attached :photo
@@ -42,5 +43,13 @@ class User < ApplicationRecord
 
     def ensure_session_token
         self.session_token ||= SecureRandom::urlsafe_base64
+    end
+
+    def ensure_user_photo
+        if !self.photo.attached?
+            self.photo.attach(
+                io: URI.open('https://welpadam-seeds.s3.us-west-1.amazonaws.com/welp_profile_pics/guest.webp'), 
+                filename: 'guest.webp')
+        end
     end
 end
