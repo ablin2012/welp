@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-const KEYWORDS = {expensive: '$$$$', cheap: '$', affordable: '$$', sf: 'san francisco', 'san fran': 'san francisco'}
+const KEYWORDS = {expensive: '$$$$', cheap: '$', affordable: '$$', sf: 'san francisco', 'san fran': 'san francisco', 'san francisco': 'san francisco', sd: 'san diego', 'san diego': 'san diego'}
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);

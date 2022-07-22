@@ -25,10 +25,10 @@ class Search extends React.Component {
                 <div className="filter-buttons">
                     <h3>Filters</h3>
                     <div className="price-filter">
-                        <button onClick={this.handleFilter('price', '$')} >$</button>
-                        <button onClick={this.handleFilter('price', '$$')} >$$</button>
-                        <button onClick={this.handleFilter('price', '$$$')} >$$$</button>
-                        <button onClick={this.handleFilter('price', '$$$$')} >$$$$</button>
+                        <button className="filter-button first" onClick={this.handleFilter('price', '$')} >$</button>
+                        <button className="filter-button" onClick={this.handleFilter('price', '$$')} >$$</button>
+                        <button className="filter-button" onClick={this.handleFilter('price', '$$$')} >$$$</button>
+                        <button className="filter-button last" onClick={this.handleFilter('price', '$$$$')} >$$$$</button>
                     </div>
                 </div>
                 <BusinessIndex businesses={businesses}/>

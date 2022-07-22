@@ -293,3 +293,36 @@ h3 {
     top: 100.5px;
     height: 100vh;
 }
+.price-filter {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.filter-button {
+    display: inline-block;
+    border: none;
+    border-top: 1px solid rgba(200,201,202,1);
+    border-left: 1px solid rgba(200,201,202,1);
+    border-bottom: 1px solid rgba(200,201,202,1);
+    background: white;
+    padding: 6px 12px;
+    color: rgba(45,46,47,1);
+    transition: background-color 0.4s,border-color 0.4s,color 0.4s,clip-path 0.45s,transform 0.4s;
+    vertical-align: baseline;
+    cursor: pointer;
+}
+.filter-button:hover {
+    background: #ebebeb;
+}
+
+.filter-button.last {
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    border-right: 1px solid rgba(200,201,202,1);
+}
+
+.filter-button.first {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+

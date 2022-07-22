@@ -11,8 +11,9 @@ class BusinessMap extends React.Component {
             {center: { lat: parseFloat(this.props.centerLat), lng: parseFloat(this.props.centerLng)},
             zoom: 15}
             ) : (
-            {center: { lat: 37.7758, lng: -122.435 },
-            zoom: 13}
+            {center: { lat: 37.7758, lng: -122.435 }, //san fran
+                // center: { lat: 32.7157, lng: -117.1611 }, //san diego
+                zoom: 13}
         );
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -27,9 +28,7 @@ class BusinessMap extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // if (prevProps.businesses.length === 0) {
             this.MarkerManager.updateMarkers(this.props.businesses);
-        // }
     }
 
     registerListeners() {
