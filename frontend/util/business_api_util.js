@@ -6,13 +6,6 @@ export const fetchBusinesses = (filters) => {
     })
 }
 
-// export const fetchAllBusinesses = () => {
-//     return $.ajax({
-//         method: 'GET',
-//         url: '/api/businesses',
-//     })
-// }
-
 export const fetchBusiness = (id) => {
     return $.ajax({
         method: 'GET',
@@ -43,7 +36,6 @@ export const deleteReview = (reviewId) => {
 }
 
 export const updateReview = (review) => {
-    console.log(review)
     return $.ajax({
         method: 'PATCH',
         url: `/api/reviews/${review.id}`,

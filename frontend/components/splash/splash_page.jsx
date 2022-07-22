@@ -13,6 +13,7 @@ class SplashPage extends React.Component {
 
     componentDidMount() {
         setInterval(this.transitionPhoto, 10000);
+        this.props.clearFilters();
     }
 
     componentWillUnmount() {

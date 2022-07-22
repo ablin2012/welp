@@ -19,17 +19,16 @@ class Search extends React.Component {
     }
 
     render () {
-        console.log(this.props.location.search)
         let {businesses, updateFilter} = this.props
         return (
             <div className="search-page">
                 <div className="filter-buttons">
                     <h3>Filters</h3>
                     <div className="price-filter">
-                        <button onClick={this.handleFilter('name', '$')} >$</button>
-                        <button onClick={this.handleFilter('name', '$$')} >$$</button>
-                        <button onClick={this.handleFilter('name', '$$$')} >$$$</button>
-                        <button onClick={this.handleFilter('name', '$$$$')} >$$$$</button>
+                        <button onClick={this.handleFilter('price', '$')} >$</button>
+                        <button onClick={this.handleFilter('price', '$$')} >$$</button>
+                        <button onClick={this.handleFilter('price', '$$$')} >$$$</button>
+                        <button onClick={this.handleFilter('price', '$$$$')} >$$$$</button>
                     </div>
                 </div>
                 <BusinessIndex businesses={businesses}/>

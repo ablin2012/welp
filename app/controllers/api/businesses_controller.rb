@@ -7,6 +7,14 @@ class Api::BusinessesController < ApplicationController
                                             OR LOWER(price) LIKE LOWER(?)", 
                                             "%" + params[:name] + "%", "%" + params[:name] + "%", params[:name])
         end
+        if params[:location] != ''
+            businesses = businesses.where("LOWER(city) LIKE LOWER(?)",
+                                            "%" + params[:location] + "%")
+        end
+        if params[:price] != ''
+            businesses = businesses.where("price LIKE ?",
+                                            params[:price])
+        end
         @businesses = businesses
         render :index
     end

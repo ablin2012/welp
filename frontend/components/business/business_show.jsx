@@ -52,7 +52,10 @@ class BusinessShow extends React.Component{
         let avgClass = avgRatingBigClass(business.avgRating);
         return (
             <div className="business-show-page">
-                <div className="show-header" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[0] + '), url(' + business.photoUrls[1] + '), url(' + business.photoUrls[2] + ')'}}>
+                <div className="show-header" >
+                    <div className="show-header-image" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[0] + ')'}}></div>
+                    <div className="show-header-image" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[1] + ')'}}></div>
+                    <div className="show-header-image" style={{backgroundImage: 'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(33, 33, 33, 0.7)), url(' + business.photoUrls[2] + ')'}}></div>
                     <div className="show-header-text">
                         <h1>{business.name}</h1>
                         <div className={`stars ${avgClass}`}></div>

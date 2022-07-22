@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-const KEYWORDS = {expensive: '$$$$', cheap: '$', affordable: '$$'}
+const KEYWORDS = {expensive: '$$$$', cheap: '$', affordable: '$$', sf: 'san francisco', 'san fran': 'san francisco'}
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -11,14 +11,22 @@ class SearchBar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.clearFilters();
         this.props.history.push('/search');
-        let filter;
-        if (this.state.name in KEYWORDS) {
-            filter = KEYWORDS[this.state.name];
+        let nameFilter;
+        let locationFilter;
+        if (this.state.name.toLowerCase() in KEYWORDS) {
+            nameFilter = KEYWORDS[this.state.name.toLowerCase()];
         } else {
-            filter = this.state.name;
+            nameFilter = this.state.name;
         }
-        this.props.updateFilter('name', filter);
+        if (this.state.location.toLowerCase() in KEYWORDS) {
+            locationFilter = KEYWORDS[this.state.location.toLowerCase()];
+        } else {
+            locationFilter = 'san francisco'
+        }
+        this.props.updateFilter('name', nameFilter);
+        this.props.updateFilter('location', locationFilter)
     }
 
     update(field) {
@@ -39,7 +47,6 @@ class SearchBar extends React.Component {
                         value={this.state.location} 
                         onChange={this.update('location')} 
                         placeholder="SF, San Francisco"/>
-                    {/* <Link to='/search'><button className="wbtn">Search</button></Link> */}
                     <button className="wbtn"><i className="fas fa-search"></i></button>
                 </form>
             </div>

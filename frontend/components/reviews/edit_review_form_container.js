@@ -9,10 +9,8 @@ class EditReviewForm extends React.Component {
     }
   
     render () {
-      // DO NOT MODIFY THIS FUNCTION
       const { review, formType, submitReview } = this.props;
-      // Hint: The review will not exist on the first render - what do we need to do
-      // to get it?
+
       if (!review) return null;
       return (
         <ReviewForm

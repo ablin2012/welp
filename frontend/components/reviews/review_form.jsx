@@ -1,5 +1,6 @@
 import React from "react";
 import ReviewsIndexContainer from "../reviews/reviews_index_container";
+import { withRouter } from "react-router-dom";
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -45,8 +46,8 @@ class ReviewForm extends React.Component {
         } else {
             finalReview = Object.assign({}, {rating: this.state.rating}, {body: this.state.body}, {business_id: this.state.business_id});
         }
-        // debugger;
-        this.props.submitReview(finalReview);
+        this.props.submitReview(finalReview)
+            .then(() => this.props.history.goBack());
     }
 
     handleHover(numStr) {
@@ -146,4 +147,4 @@ class ReviewForm extends React.Component {
     }
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);

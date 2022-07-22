@@ -1,10 +1,11 @@
-import { UPDATE_FILTER } from '../actions/filter_actions'
+import { UPDATE_FILTER, CLEAR_FILTERS } from '../actions/filter_actions'
 
 const defaultFilters = Object.freeze({
   bounds: {},
   name: '',
   price: '',
-  category: ''
+  category: '',
+  location: ''
 });
 
 const filtersReducer = (state = defaultFilters, action) => {
@@ -14,6 +15,8 @@ const filtersReducer = (state = defaultFilters, action) => {
         [action.filter]: action.value
       };
       return Object.assign({}, state, newFilter);
+    } else if (action.type === CLEAR_FILTERS) {
+      return Object.assign({}, defaultFilters);
     } else {
       return state;
     }
