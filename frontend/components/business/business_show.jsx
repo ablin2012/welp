@@ -112,7 +112,7 @@ class BusinessShow extends React.Component{
                         </div>
                         <div className="show-reviews-container">
                             <div><h3>Recommended Reviews</h3></div>
-                            <ReviewsIndexContainer />
+                            <ReviewsIndexContainer customStyle="full"/>
                         </div>
                     </div>
                     <div className="show-sidebar">

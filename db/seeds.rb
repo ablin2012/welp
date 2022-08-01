@@ -686,63 +686,6 @@ u11.photo.attach(
     filename: 'ozai.png'
 )
 
-
-r1 = Review.create!(
-    rating: 4,
-    body: 'When they say that they are the best Cheesesteak, they really mean it. I\'d give 5 stars, but the cheesesteaks weren\'t photogenic enough for my foodstagram',
-    user_id: u3.id,
-    business_id: b3.id,
-)
-
-r2 = Review.create!(
-    rating: 2,
-    body: 'The lines are way too long and everything is too organic. Sometimes you just want some Totino\'s pizza rolls',
-    user_id: u6.id,
-    business_id: b2.id,
-)
-
-r3 = Review.create!(
-    rating: 4,
-    body: 'The boba is really good. Might be my favorite spot in SF, but the service is a little slow',
-    user_id: u2.id,
-    business_id: b5.id,
-)
-
-r4 = Review.create!(
-    rating: 1,
-    body: 'I prefer hot drinks and their selection of hot drinks is less that average',
-    user_id: u4.id,
-    business_id: b6.id,
-)
-
-r5 = Review.create!(
-    rating: 5,
-    body: 'I stuffed my face full of food here. The selection is amazing and the flavors are out of this world',
-    user_id: u5.id,
-    business_id: b4.id,
-)
-
-r6 = Review.create!(
-    rating: 3,
-    body: 'The food was good, but I wish they had a larger selection for vegetarians',
-    user_id: u2.id,
-    business_id: b4.id,
-)
-
-r7 = Review.create!(
-    rating: 4,
-    body: 'The food is fantastic, but the prices are a bit high for the portions',
-    user_id: u4.id,
-    business_id: b1.id,
-)
-
-r8 = Review.create!(
-    rating: 4,
-    body: 'AMAZING cheesesteak, but I want them to be BIGGER',
-    user_id: u6.id,
-    business_id: b3.id,
-)
-
 # Reviews for Chubby Noodle
 Review.create!(rating: 5, body: 'This place was definitely my favorite brunch experience. Went on a Sunday during pride weekend and it was such a blast! The music was great, the food was packed with flavor', user_id: u9.id, business_id: b1.id,) #suki
 Review.create!(rating: 2, body: 'The service was terrible! My girlfriend and I placed an order to go and not only did we have to wait 20 minutes for our food, they gave us the wrong order! We had to give the food back and wait another 20 mins!', user_id: u2.id, business_id: b1.id,) #aang

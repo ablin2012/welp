@@ -3,6 +3,10 @@ import ReviewsIndexItem from "./reviews_index_item";
 
 class ReviewsIndex extends React.Component {
     render() {
+        let customStyle = '';
+        if (this.props.customStyle) {
+            customStyle = this.props.customStyle;
+        }
         let {reviews, users, currentUserId, deleteReview} = this.props;
         return (
             <div className="reviews-index">
@@ -13,7 +17,8 @@ class ReviewsIndex extends React.Component {
                             user={users[review.userId]} 
                             currentUserId={currentUserId}
                             deleteReview={deleteReview}
-                            key={review.id} />)
+                            key={review.id} 
+                            customStyle={customStyle}/>)
                     })}
                 </div>
             </div>

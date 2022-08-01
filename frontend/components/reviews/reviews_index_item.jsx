@@ -19,29 +19,39 @@ class ReviewsIndexItem extends React.Component {
         this.props.history.push(`/reviews/${this.props.review.id}/edit`)
     }
 
+    handleDrop() {
+        document.getElementById("my-dropdown").classList.toggle('show')
+    }
+
     render() {
-        let {review, user, currentUserId} = this.props;
+        let {review, user, currentUserId, customStyle} = this.props;
         let rateClass = avgRatingClass(review.rating);
         let lname = user.lastName.slice(0,1) + '.';
         let deleteButton = (review.userId === currentUserId) ? (
-            <div>
-                <button onClick={this.deleteReview}>delete</button>
-                <button onClick={this.updateReview}>update</button>
+            <div className="dropdown">
+                <button onClick={this.handleDrop} className="drop-btn">...</button>
+                <div id="my-dropdown" className="dropdown-content">
+                    <button onClick={this.deleteReview}>Delete</button>
+                    <button onClick={this.updateReview}>Update</button>
+                </div>
             </div>
         ) : (
             null
         )
         return (
-            <div className="review-container">
+            <div className={`review-container ${customStyle}`} >
                 <div className="review-info">
-                    <div className="author-info">
-                        <div className="profile-pic" style={{backgroundImage: 'url(' + user.photoUrl + ')'}}>
+                    <div className={`author-info ${customStyle}`}>
+                        <div className="profile-pic" style={{backgroundImage: 'url(' + user.photoUrl + ')'}}></div>
+                        <div className="review-right">
+                            <div>
+                                <h2>{user.firstName} {lname}</h2>
+                            </div>
+                            {deleteButton}
                         </div>
-                        <h2>{user.firstName} {lname}</h2>
                     </div>
                     <div className={`stars ${rateClass}`}></div>
                     <div className="review-body">{review.body}</div>
-                    {deleteButton}
                 </div>
             </div>
         );
