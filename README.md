@@ -1,6 +1,6 @@
 # Welp README
 
-![welp logo](welp_logo_background.png)
+![welp logo](./app/assets/images/welp_logo_background.png)
 
 [Welp] (https://welpadam.herokuapp.com/#/) is a full stack clone of Yelp.com, a social media website for browsing and reviewing local businesses.
 
